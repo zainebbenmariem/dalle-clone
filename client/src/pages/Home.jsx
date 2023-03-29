@@ -53,7 +53,7 @@ const Home = () => {
       </div>
       <div className='mt-16'><FormField/>
       </div>
-      <div mt-10>{loading ? (
+      <div className="mt-10">{loading ? (
         <div className='flex justify-center items-center'><Loader/></div>
       ): (
         <>
@@ -64,7 +64,7 @@ const Home = () => {
           {searchText ? (
             <RenderCards data={[]} title="No search results found"/>
           ): (
-            <RenderCards data={[]} title="No posts found" />
+            <RenderCards data={allPosts} title="No posts found" />
           )}
         </div>
         </>
